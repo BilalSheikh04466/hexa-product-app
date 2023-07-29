@@ -1,9 +1,10 @@
 import Cookies from 'js-cookie';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { selectCurrentUser } from './authSlice';
 
-const RequireAuth = () => {
+export const RequireAuth: React.FC = () => {
     const user = useSelector(selectCurrentUser);
     console.log(user);
     const location = useLocation();
@@ -17,4 +18,3 @@ const RequireAuth = () => {
         <Navigate to="/login" state={{ from: location }} replace />
     );
 };
-export default RequireAuth;

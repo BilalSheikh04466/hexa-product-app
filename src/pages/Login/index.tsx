@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
@@ -8,7 +8,7 @@ import {
 } from '../../features/auth/authApiSlice';
 import { setCredentials } from '../../features/auth/authSlice';
 
-const Login = () => {
+export const Login: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -78,5 +78,3 @@ const Login = () => {
         </div>
     );
 };
-
-export default Login;

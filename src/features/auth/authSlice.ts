@@ -10,7 +10,8 @@ const authSlice = createSlice({
             const { user } = action.payload;
             state.user = user;
         },
-        logOut: (state, action) => {
+        // removed action from prop
+        logOut: (state) => {
             state.user = null;
         },
     },

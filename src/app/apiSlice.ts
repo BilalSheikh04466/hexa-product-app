@@ -7,5 +7,6 @@ const baseQuery = fetchBaseQuery({
 
 export const apiSlice = createApi({
     baseQuery: baseQuery,
-    endpoints: (builder) => ({}),
+    endpoints: () => ({}),
 });
+// remove builder from endpoints prop

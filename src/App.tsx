@@ -1,14 +1,11 @@
-// import axios from "axios";
-// import { useEffect, useState } from "react";
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Home from './components/Home/component';
-import Layout from './components/Layout/component';
-import RequireAuth from './features/auth/RequireAuth';
-import Login from './pages/Login/Login';
-import Welcome from './pages/Welcome/Welcome';
+import { Home, Layout } from './components';
+import { RequireAuth } from './features/auth/RequireAuth';
+import { Login } from './pages/Login';
 
-function App() {
+const App: React.FC = () => {
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
@@ -18,11 +15,11 @@ function App() {
 
                 {/* protected routes */}
                 <Route element={<RequireAuth />}>
-                    <Route path="welcome" element={<Welcome />} />
+                    <Route path="welcome" element={<Home />} />
                 </Route>
             </Route>
         </Routes>
     );
-}
+};
 
 export default App;

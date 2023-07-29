@@ -1,9 +1,8 @@
 import Cookies from 'js-cookie';
+import React from 'react';
 
-const Welcome = () => {
+export const Welcome: React.FC = () => {
     const val = Cookies.get('jwt');
     console.log(val);
     return <div>HII</div>;
 };
-
-export default Welcome;
