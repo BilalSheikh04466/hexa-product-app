@@ -1,8 +1,10 @@
-import Cookies from 'js-cookie';
 import React from 'react';
+import { Navbar } from '../../components';
 
 export const Welcome: React.FC = () => {
-    const val = Cookies.get('jwt');
-    console.log(val);
-    return <div>HII</div>;
+    return (
+        <>
+            <Navbar></Navbar>
+        </>
+    );
 };

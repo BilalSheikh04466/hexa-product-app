@@ -1,0 +1,86 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.default {
+    font-style: normal;
+    text-align: center;
+}
+
+// text styling
+.title-xl-semibold {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: -1.8px;
+}
+
+.title-xs-medium {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.72px;
+
+    @media screen and (max-width: $mobile-screen) {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.54px;
+    }
+}
+
+.text-xl-regular {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px; /* 150% */
+    letter-spacing: -0.6px;
+}
+
+.text-sm-regular {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.42px;
+
+    @media screen and (max-width: $mobile-screen) {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -0.36px;
+    }
+}
+
+.text-sm-semibold {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.42px;
+}
+
+.text-xs-regular {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+}
+
+.text-md-semibold {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.48px;
+}
+
+// colors
+.blue-gdnt {
+    @include blue-gradient;
+}
+
+.blue-primary {
+    color: $hexaPrimaryBlue;
+}
+
+.grey {
+    color: $hexaGrey;
+}
+
+.white {
+    color: $hexaWhite;
+}

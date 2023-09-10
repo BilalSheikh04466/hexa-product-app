@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import { Home, Layout } from './components';
 import { RequireAuth } from './features/auth/RequireAuth';
+import { NewLogin, Welcome } from './pages';
 import { Login } from './pages/Login';
 
 const App: React.FC = () => {
@@ -12,10 +13,11 @@ const App: React.FC = () => {
                 {/* public routes */}
                 <Route index element={<Home />} />
                 <Route path="login" element={<Login />} />
+                <Route path="new" element={<NewLogin />} />
 
                 {/* protected routes */}
                 <Route element={<RequireAuth />}>
-                    <Route path="welcome" element={<Home />} />
+                    <Route path="welcome" element={<Welcome />} />
                 </Route>
             </Route>
         </Routes>
